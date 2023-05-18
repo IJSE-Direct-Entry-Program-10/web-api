@@ -128,7 +128,7 @@ section > ul > li:hover div > span:first-child{
 }
 
 section > ul > li > label > input {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
 }
 
@@ -150,6 +150,10 @@ section > ul > li:hover label::before {
     height: 17px;
     border: 2px solid dodgerblue;
     vertical-align: middle;
-    border-radius: 4px;
+    border-radius: 4px; 
     margin-right: 5px;
+}
+
+.completed label span{
+    text-decoration: line-through;
 }

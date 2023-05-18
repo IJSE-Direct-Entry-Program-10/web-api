@@ -25,7 +25,7 @@ class Task {
         const liElm = document.createElement('li');
         liElm.innerHTML = `
                     <label>
-                        <input type="checkbox" selected="${this.status === COMPLETED}"> 
+                        <input type="checkbox" ${this.status === COMPLETED ? 'checked': ''}> 
                         <span class="task-desc">${this.description}</span>
                     </label>
                     <div>
@@ -102,6 +102,19 @@ taskListElm.addEventListener('click', (eventData)=> {
     }else if (eventData?.target.classList.contains("delete-task")){
         const taskId = eventData.target.closest("li").getAttribute("data-task-id");
         removeTask(taskId);
+    }
+});
+
+taskListElm.addEventListener('change', (eventData)=> {
+    if (eventData.target?.tagName === 'label'){
+        const taskId = eventData.target.closest("li").getAttribute("data-task-id");
+        const task = getTask(taskId);
+        task.status = eventData.target.checked ? COMPLETED : NOT_COMPLETED;
+        if (task.status === COMPLETED){
+            eventData.target.closest('li').classList.add('completed');
+        }else {
+            eventData.target.closest('li').classList.remove('completed');
+        }
     }
 });
 
