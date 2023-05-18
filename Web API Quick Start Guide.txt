@@ -1,0 +1,102 @@
+SELECTIONS
+	- document.getElementById('id') : HTMLElement
+	
+	*- document.querySelector('valid css selector') : HTMLElement
+	
+	- document.getElementsByTagName('tag name') : HTMLCollection<HTMLElement>
+	
+	- document.getElementsByClassName('class name') : HTMLCollection<HTMLElement>
+	
+	*- document.querySelectorAll('valid css selector') : HTMLCollection<HTMLElement>
+	
+TRAVERSING
+
+	- HTMLElement.parentElement : HTMLElement
+	
+	- HTMLElement.closest('parent'): HTMLElement
+
+	- HTMLElement.children :  HTMLCollection<HTMLElement>
+	
+	- HTMLElement.querySelector('valid css selector') : HTMLElement
+	
+	- HTMLElement.querySelectorAll('valdi css selector') : HTMLCollection<HTMLElement>
+
+MANIPULATIONS
+
+	- document.createElement('tag name') : HTMLElement;
+
+	- HTMLElement.prepend(HTMLElement);
+	
+	- HTMLElement.append(HTMLElement);
+	
+	- HTMLElement.insertBefore(newElement, refElement);
+	
+	- HTMLElement.insertAdjacentElement('pos', HTMLElement);
+	  pos = {'beforebegin', 'afterbegin', 'beforeend', 'afterend'}
+	
+	- HTMLElement.replaceWith(newElement);
+	
+	- HTMLElement.cloneNode([deep = false]): HTMLElement;
+	
+	- HTMLElement.remove();
+	
+	- HTMLElement.innerText : String
+	
+	- HTMLElement.innerHTML : String
+	
+	- HTMLInputElement.value : Any
+	
+	- HTMLElement.setAttribute('attributeName', 'attributeValue');
+	
+	- HTMLElement.getAttribute('attributeName') : String;
+	
+	- HTMLElement.removeAttribute('attributeName');
+	
+STYLING
+
+	- HTMLElement.style : CSSStyleDeclaration
+	
+	* Inline Styling (to set)
+	- HTMLElement.style.<css property in camelcase> = value;
+	
+	* To get any css property value
+	- getComputedStyle(HTMLElement) : CSSStyleDeclaration	
+	
+	- HTMLElement.classList.add('class name', 'class name', ...);
+	
+	- HTMLElement.classList.contains('class name') : boolean;
+	
+	- HTMLElement.classList.toggle('class name');
+	
+	- HTMLElement.classList.remove('class name', 'class name', ...);
+	
+	- HTMLElement.classList.forEach(className => <code>);
+	
+	- HTMLElement.className : String
+	
+EVENTS HANDLING
+
+	Event Target -> Node -> Element -> HTMLELement -> Specific HTML Element
+	
+	- HTMLElement.addEventListener('event type', <function object that acts as the listner>);
+	
+	- HTMLElement.removeEventListener('event type', <event listener>);
+	
+	- HTMLElement.click();
+	
+	- HTMLELement.focus();
+	
+	- HTMLInputElemnt.select();
+	
+	By defaults events do propagate from child to root
+	* eventData.stopPropagation();
+	* eventData.stopImmediatePropagation();
+	* eventData.preventDefault();
+	* eventData.key
+	* eventData.clientX
+	* eventData.clientY
+	* eventData.screenX
+	* eventData.screenY
+
+	
+	

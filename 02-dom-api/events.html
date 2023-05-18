@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handling</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            background-color: yellow;
+            width: 400px;
+            height: 400px;
+        }
+
+        #inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 250px;
+            background-color: rgb(50, 122, 204);
+        }
+
+        #circle {
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+        }
+    </style>
+    <script defer src="js/events.js"></script>
+</head>
+<body>
+    <h1>Events Handling</h1>
+    <div id="outer">
+        <div id="inner">
+            <div id="circle">
+            </div>
+        </div>
+    </div>
+    <a href="https://google.lk">Visit Google</a>
+    <input type="text">
+</body>
+</html>
