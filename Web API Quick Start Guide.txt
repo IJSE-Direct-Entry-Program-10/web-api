@@ -98,5 +98,13 @@ EVENTS HANDLING
 	* eventData.screenX
 	* eventData.screenY
 
+TIMERS
+
+	- setInterval(<function>, <time in millis>) : timerId;
 	
+	- setTimeout(<function>, <time in millis>): timerId
+	
+	- clearInterval(timerId);
+	
+	- clearTimeout(timerId);
 	
