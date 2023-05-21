@@ -34,15 +34,27 @@ class Particle {
         const r2 = this.width / 2;
         const xDiff = this.x + r2 - divElm.offsetLeft;
         const yDiff = this.y + r2 - divElm.offsetTop;
-        const hypot = Math.hypot(xDiff, yDiff);
+        const hypot = Math.hypot(xDiff, yDiff);     
 
         if (hypot <= (r1 + r2 + 5)){
-            this.y -= this.dy;
-            this.x -= this.dx;
+            const slope = Math.abs(yDiff / xDiff);
+            const angle = Math.abs(Math.atan(slope));
+
+            let translateY = (r1 + r2 + 5) * Math.sin(angle);
+            let translateX = (r1 + r2 + 5) * Math.cos(angle);
+
+            if (xDiff > 0) {
+                this.x = divElm.offsetLeft + translateX - r2;
+            }else {
+                this.x = divElm.offsetLeft - translateX - r2;
+            }
+            if (yDiff > 0){
+                this.y = divElm.offsetTop + translateY - r2;
+            }else{
+                this.y = divElm.offsetTop - translateY - r2;
+            }
             this.dy = -this.dy;
             this.dx = -this.dx;
-            this.y += this.dy * 5;
-            this.x += this.dx * 5;
         }        
 
         if (this.y >= (innerHeight - this.height) || this.y <= 0) this.dy = -this.dy;
