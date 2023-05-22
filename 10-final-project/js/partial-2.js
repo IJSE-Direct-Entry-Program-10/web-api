@@ -34,7 +34,7 @@ class Particle {
         const r2 = this.width / 2;
         const xDiff = this.x + r2 - divElm.offsetLeft;
         const yDiff = this.y + r2 - divElm.offsetTop;
-        const hypot = Math.hypot(xDiff, yDiff);     
+        const hypot = Math.hypot(xDiff, yDiff);         
 
         if (hypot <= (r1 + r2 + 5)){
             const slope = Math.abs(yDiff / xDiff);
