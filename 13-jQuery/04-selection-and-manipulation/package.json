@@ -1,0 +1,9 @@
+{
+  "name": "04-selection-and-manipulation",
+  "version": "1.0.0",
+  "author": "Direct Entry Program <dep@ijse.lk> (https://ijse.lk)",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  }
+}

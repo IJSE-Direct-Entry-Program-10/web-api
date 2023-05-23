@@ -1,0 +1,27 @@
+SELECTIONS
+	$("valid css selector") : jQuery | (jQuery[]:HTMLElement)
+	jQuery[] means jQuery array like object 
+	
+	$("valid css selector")[0]: HtmlElement
+	$("valid css selector").each((index, elm:HTMLElement)=> {});
+	
+MANIPULATIONS
+	$("html") : jQuery 	- To create a new element
+	
+	jQuery.append(jQuery | htmlString);					
+	jQuery.prepend(jQuery | htmlString);
+	jQuery.before(jQuery | htmlString);
+	jQuery.after(jQuery | htmlString);
+	
+	jQuery.replaceWith(jQuery | htmlString);
+	jQuery.replaceAll("valid css selector");
+	
+	jQuery.text(); 		== getter of innerText
+	jQuery.text('text');	== setter of innerText
+	jQuery.html();		== getter of innerHTML
+	jQuery.html('html');	== setter of innerHTML
+	
+	jQuery.empty();		- Remove child nodes
+	jQuery.remove(); 	- Remove selected nodes
+		
+
