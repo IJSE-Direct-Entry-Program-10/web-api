@@ -6,7 +6,7 @@ SELECTIONS
 	$("valid css selector").each((index, elm:HTMLElement)=> {});
 	
 MANIPULATIONS
-	$("html") : jQuery 	- To create a new element
+	$("html string") : jQuery 	- To create a new element
 	
 	jQuery.append(jQuery | htmlString);					
 	jQuery.prepend(jQuery | htmlString);
@@ -24,4 +24,58 @@ MANIPULATIONS
 	jQuery.empty();		- Remove child nodes
 	jQuery.remove(); 	- Remove selected nodes
 		
+STYLING
 
+	jQuery.css("css property");		- Getter
+	jQuery.css("css property", "value");	- Setter
+	* <css property> = kebab-cases Eg. background-color
+	
+	jQuery.addClass("class name").addClass("class name").addClass("class name");
+	jQuery.addClass("space sepreated class name list");
+	jQuery.addClass(['class1', 'class2', ...]);
+	
+	jQuery.removeClass("class name").removeClass("class name");
+	jQuery.removeClass("space sepreated class name list");
+	jQuery.removeClass(['class1', 'class2', ...]);
+	
+	jQuery.hasClass("class name");
+	jQuery.hasClass("space sepreated class name list");
+	
+	jQuery.toggleClass("class name");
+	
+FORMS ELEMENTS
+
+	jQuery.val();				- Getter
+	jQuery.val('value');			- Setter
+	
+EVENT HANDLING
+
+	jQuery.on('event type', function);	- To attach a new event listener
+	jQuery.off('event type', [function]);	- To detach an event listener
+	jQuery.trigger('event type');		- To explicitly trigger an event
+	
+	- To setup delegated event handlers
+	jQuery.on('event type', 'target', function);	
+	* target:= valid css selector
+	
+TRAVERSING
+
+	jQuery.parent()	: jQuery
+	jQuery.parents("valid css selector") : jQuery
+	
+	jQuery.children("valid css selector"): jQuery
+	jQuery.find("valid css selector"): jQuery
+	
+	
+ATTRIBUTES
+
+	jQuery.attr('attribute name');		- Getter
+	jQuery.attr('attribute name', 'value')	- Setter
+	
+	eg. $("img").attr("src");
+	
+	
+	
+	
+	
+	

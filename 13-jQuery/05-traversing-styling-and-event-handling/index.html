@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling, Traversing and Event Handling</title>
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <style>
+        .format {
+            font-size: 2rem;
+            text-decoration: underline;
+            font-family: Ubuntu;
+        }
+
+        .bg {
+            background-color: yellowgreen;
+            border-radius: 5px;
+            transform: scale(1.25) rotate(75deg);
+        }
+
+        ol li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Styling, Traversing and Event Handling</h1>
+    <div>
+        <input type="text" placeholder="Enter something"><button id="btn-add">Add</button>
+    </div>
+    <ol></ol>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ul>
+    <div>Hey! I am a <span>div</span> element</div>
+    <div>Hey! I am a div element and I host an ul element inside me
+        <ul>
+            <li>DEP</li>
+            <li>CMJD</li>
+            <li>ABSD</li>
+        </ul>
+    </div>
+    <h2>Please style me via classes</h2>
+    <button id="btn-set-styles">Set Styles</button>
+    <button id="btn-check-status">Check Status</button>
+    <button id="btn-clear-styles">Clear Styles</button>
+
+    <hr>
+    <input id="file-chooser" type="file" style="display: none">
+    <button id="btn-load-image">Load Image</button>
+    <button id="btn-clear-image">Clear Image</button>
+    <div>
+        <img src="" alt="No Image Yet">
+    </div>
+</body>
+</html>
