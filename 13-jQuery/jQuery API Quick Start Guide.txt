@@ -66,6 +66,9 @@ TRAVERSING
 	jQuery.children("valid css selector"): jQuery
 	jQuery.find("valid css selector"): jQuery
 	
+	jQuery.prev("valid css selector"): jQuery
+	jQuery.next("valid css selector"): jQuery
+	
 	
 ATTRIBUTES
 
